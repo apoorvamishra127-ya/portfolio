@@ -11,7 +11,7 @@ const BASE_PROJECTS = [
     title: 'AIML Bootcamp 2026',
     category: 'python',
     categoryLabel: 'Machine Learning',
-    description: 'Machine learning and data science repository from GLA University covering Python data analysis, Pandas, Matplotlib visualizations, and predictive ML session notebooks.',
+    description: 'Machine learning and data science repository from GLA University covering Python data analysis, Pandas preprocessing, Matplotlib visualizations, and predictive ML session notebooks.',
     technologies: ['Jupyter Notebook', 'Python', 'Pandas', 'Matplotlib', 'Machine Learning'],
     githubUrl: 'https://github.com/apoorvamishra127-ya/aimlbootcamp-2026',
     liveUrl: null,
@@ -19,16 +19,16 @@ const BASE_PROJECTS = [
     highlights: ['GLA ML Sessions', 'Data Visualizations', 'Pandas Preprocessing']
   },
   {
-    id: 'personal-portfolio',
+    id: 'portfolio',
     title: 'Personal Portfolio Website',
     category: 'web',
     categoryLabel: 'Web Development',
-    description: 'Modern, responsive personal developer portfolio website showcasing projects, skills, education, and Microsoft Azure certification with light/dark themes and fluid interactions.',
+    description: 'Modern, responsive personal developer portfolio website built with React, Tailwind CSS, and Vite, featuring Microsoft Azure certification showcase, dark/light theme system, and fluid animations.',
     technologies: ['React', 'Tailwind CSS', 'JavaScript', 'Vite', 'Framer Motion'],
-    githubUrl: 'https://github.com/apoorvamishra127-ya',
+    githubUrl: 'https://github.com/apoorvamishra127-ya/portfolio',
     liveUrl: '#',
-    source: 'GitHub & Resume',
-    highlights: ['Responsive UI/UX', 'Dark/Light Theme Engine', 'Clean Component Architecture']
+    source: 'GitHub Repository',
+    highlights: ['Responsive UI/UX', 'Dark/Light Theme System', 'Clean Component Architecture']
   },
   {
     id: 'frontend-mini-projects',
@@ -151,8 +151,8 @@ export default function Projects() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           Featured Projects
         </h2>
-        <p className="mt-2 text-slate-600 dark:text-slate-400 text-sm">
-          Public repositories, AI/ML models, and academic software engineering projects.
+        <p className="mt-2 text-slate-600 dark:text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
+          Selected projects showcasing my work across AI/ML, data, APIs and web development.
         </p>
       </div>
 
@@ -197,7 +197,8 @@ export default function Projects() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      title="View GitHub Repository"
+                      title="GitHub Repository"
+                      aria-label="GitHub Repository"
                       className="p-2 rounded-lg bg-slate-100 dark:bg-[#19233c] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-[#273553] transition-colors"
                     >
                       <GithubIcon className="w-4 h-4" />
@@ -207,7 +208,8 @@ export default function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        title={project.category === 'algorithms' ? "View LeetCode Profile" : "Live Demo"}
+                        title={project.category === 'algorithms' ? "LeetCode Profile" : "Live Demo"}
+                        aria-label={project.category === 'algorithms' ? "LeetCode Profile" : "Live Demo"}
                         className="p-2 rounded-lg bg-slate-100 dark:bg-[#19233c] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-[#273553] transition-colors"
                       >
                         {project.category === 'algorithms' ? <LeetCodeIcon className="w-4 h-4" /> : <ExternalLink size={15} />}

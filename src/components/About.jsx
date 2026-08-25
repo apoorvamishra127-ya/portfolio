@@ -51,15 +51,15 @@ export default function About() {
             <span className="w-2.5 h-6 bg-slate-900 dark:bg-blue-500 rounded-sm inline-block"></span>
             Professional Summary
           </h3>
-          <div className="space-y-3.5 text-slate-600 dark:text-slate-400 leading-relaxed text-xs sm:text-sm">
+          <div className="space-y-3 text-slate-600 dark:text-slate-400 leading-relaxed text-xs sm:text-sm">
             <p>
-              I am a <strong className="text-slate-900 dark:text-white font-semibold">B.Tech Artificial Intelligence & Machine Learning</strong> student with a strong foundation in <span className="font-semibold text-slate-800 dark:text-slate-200">Python, Machine Learning, Data Analysis, SQL, and Web Development</span>.
+              I am a <strong className="text-slate-900 dark:text-white font-semibold">B.Tech Artificial Intelligence & Machine Learning student at GLA University</strong> with a solid foundation in Python, machine learning, data analysis, SQL, and modern web development.
             </p>
             <p>
-              Experienced in building AI-driven and full-stack projects with hands-on exposure to <span className="font-semibold text-slate-800 dark:text-slate-200">Git, GitHub, Pandas, and modern development tools</span>.
+              I enjoy building real-world AI-driven systems, predictive models, and responsive web applications with hands-on exposure to Pandas, Git/GitHub, and modern full-stack tools.
             </p>
             <p>
-              Passionate about solving real-world challenges through practical AI/ML solutions and actively seeking opportunities to apply technical skills in impactful internships and software projects.
+              Passionate about solving complex challenges with clean algorithms, I am actively seeking impactful internships and software engineering opportunities to apply and expand my technical expertise.
             </p>
           </div>
 

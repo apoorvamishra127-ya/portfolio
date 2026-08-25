@@ -18,7 +18,7 @@ export default function Hero({ onOpenResume }) {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span>Open for AI/ML & Web Development Opportunities</span>
+          <span>AI/ML • Data • Full-Stack Development</span>
         </motion.div>
 
         {/* Hero Name Heading */}
@@ -95,7 +95,7 @@ export default function Hero({ onOpenResume }) {
               href="https://github.com/apoorvamishra127-ya"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub Profile"
+              aria-label="GitHub"
               title="GitHub"
               className="p-3 rounded-xl interactive-icon-btn"
             >
@@ -107,7 +107,7 @@ export default function Hero({ onOpenResume }) {
               href="https://leetcode.com/u/apoorvaa_M7/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LeetCode Profile"
+              aria-label="LeetCode"
               title="LeetCode"
               className="p-3 rounded-xl interactive-icon-btn"
             >
@@ -119,7 +119,7 @@ export default function Hero({ onOpenResume }) {
               href="https://www.linkedin.com/in/apoorva-mishra-99447a369/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
+              aria-label="LinkedIn"
               title="LinkedIn"
               className="p-3 rounded-xl interactive-icon-btn"
             >
@@ -129,7 +129,7 @@ export default function Hero({ onOpenResume }) {
             {/* Email */}
             <a
               href="mailto:apoorvamishra127@gmail.com"
-              aria-label="Send Email"
+              aria-label="Email"
               title="Email"
               className="p-3 rounded-xl interactive-icon-btn"
             >
