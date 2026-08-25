@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* LIGHT MODE: Crisp, bright, high-contrast, clean SaaS / Developer style */
+    --bg-page: #f8fafc;
+    --bg-section: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f8fafc;
+    --border-color: #e2e8f0;
+    --border-hover: #94a3b8;
+    
+    --text-main: #0f172a;        /* Deep Slate 900 */
+    --text-muted: #334155;       /* Slate 700 */
+    --text-faint: #64748b;       /* Slate 500 */
+    
+    --pill-bg: #e2e8f0;          /* Clean light pill background */
+    --pill-text: #0f172a;        /* Dark bold text in light mode */
+    --pill-border: #cbd5e1;
+
+    --btn-primary-bg: #0f172a;   /* Deep Navy */
+    --btn-primary-text: #ffffff;
+    --btn-primary-hover: #1e293b;
+    
+    --accent: #2563eb;           /* Royal Blue */
+    --accent-subtle: #eff6ff;
+    --accent-border: #bfdbfe;
+    
+    --tag-bg: #f1f5f9;
+    --tag-text: #1e293b;
+    --tag-border: #e2e8f0;
+
+    --card-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+    --card-shadow-hover: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+  }
+
+  .dark {
+    /* DARK MODE: Deep Midnight Navy / Rich Charcoal Blue (NOT Pitch Black) */
+    --bg-page: #0b1120;          /* Deep Midnight Navy */
+    --bg-section: #0f172a;       /* Dark Slate */
+    --bg-card: #151e34;          /* Rich Navy-Slate Card */
+    --bg-card-subtle: #19233c;
+    --border-color: #1e293b;     /* Slate Border */
+    --border-hover: #3b82f6;     /* Accent Glow Border */
+    
+    --text-main: #f8fafc;        /* Crisp Off-White */
+    --text-muted: #94a3b8;       /* Muted Blue-Gray */
+    --text-faint: #64748b;       /* Subtle Slate */
+    
+    --pill-bg: #151e34;
+    --pill-text: #e2e8f0;
+    --pill-border: #273553;
+
+    --btn-primary-bg: #2563eb;   /* Rich Blue */
+    --btn-primary-text: #ffffff;
+    --btn-primary-hover: #1d4ed8;
+    
+    --accent: #38bdf8;           /* Sky/Indigo Accent */
+    --accent-subtle: rgba(56, 189, 248, 0.1);
+    --accent-border: rgba(56, 189, 248, 0.25);
+    
+    --tag-bg: #19233c;
+    --tag-text: #cbd5e1;
+    --tag-border: #273553;
+
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: 0 12px 30px -4px rgba(11, 17, 32, 0.7), 0 0 20px 2px rgba(37, 99, 235, 0.12);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Premium Card System */
+.theme-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.25s ease;
+}
+
+.theme-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Pill / Badge Utility */
+.theme-pill {
+  background-color: var(--pill-bg);
+  color: var(--pill-text);
+  border: 1px solid var(--pill-border);
+  transition: all 0.2s ease;
+}
+
+/* Subtle Interactive Tag */
+.theme-tag {
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid var(--tag-border);
+  transition: all 0.2s ease;
+}
+
+.theme-tag:hover {
+  background-color: var(--accent-subtle);
+  color: var(--accent);
+  border-color: var(--accent-border);
+}
+
+/* Interactive Icon Container */
+.interactive-icon-btn {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  box-shadow: var(--card-shadow);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-icon-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover);
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary / Ghost Button */
+.btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary:hover {
+  border-color: var(--border-hover);
+  background-color: var(--bg-card-subtle);
+  transform: translateY(-1.5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Section Background Alternation */
+.section-alt {
+  background-color: var(--bg-section);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #273553;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
